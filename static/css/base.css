@@ -1,0 +1,68 @@
+body { 
+  font-family: 'Open Sans', Arial, sans-serif;  
+  letter-spacing: 0.02rem; 
+  color: #454545;
+  background-color: #F4F4F4;
+  overflow-y:scroll;
+}
+
+div#wrap {
+  width: 700px;
+  margin: 0 auto;
+}
+
+article { 
+  background-color: #F6F6F6;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 0.1em solid #E0E0E0;
+  border-radius: 5px;
+}
+
+header { 
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+h1 { text-align: center; }
+
+section { text-align: justify; }
+
+ul { 
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+blockquote { 
+  font-style: italic;
+  margin-left: 20px;
+}
+
+p { font-size: 18px; }
+
+p.center { 
+  text-align: center; 
+}
+
+p#fortune-cookie { 
+  font-size: 27px;
+  text-align: justify;
+  font-weight: bold;
+}
+
+p#fortune-description { 
+  margin-top: 45px;
+}
+
+article a {
+  color: #FF69B4;
+  text-decoration: underline;
+  /*font-size: 0.9em;*/
+}
+
+a:hover { color: magenta; }
+
+a {
+  color: #9242C4;
+  text-decoration: none;
+}
+
