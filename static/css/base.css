@@ -11,6 +11,10 @@ div#wrap {
   margin: 0 auto;
 }
 
+header {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
 article { 
   background-color: #F6F6F6;
   margin-bottom: 20px;
@@ -33,6 +37,16 @@ ul {
 }
 
 blockquote { 
+  border-left: 3px solid #f0f0f0;
+  padding-left: 0.7em;
+  font-style: italic;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+blockquote.main { 
+  border: none;
+  padding-left: 0;
   font-style: italic;
   margin-left: 20px;
 }
@@ -59,7 +73,7 @@ article a {
   /*font-size: 0.9em;*/
 }
 
-a:hover { color: magenta; }
+a:hover { color: #FF00FF; }
 
 a {
   color: #9242C4;
