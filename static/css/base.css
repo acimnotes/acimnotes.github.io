@@ -11,25 +11,20 @@ div#wrap {
   margin: 0 auto;
 }
 
-header {
+header { 
   font-family: 'Montserrat', Arial, sans-serif;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
 article { 
+  text-align: justify;
   background-color: #F6F6F6;
   margin-bottom: 20px;
   padding: 20px;
   border: 0.1em solid #E0E0E0;
   border-radius: 5px;
 }
-
-header { 
-  margin-top: 45px;
-  margin-bottom: 45px;
-}
-h1 { text-align: center; }
-
-section { text-align: justify; }
 
 ul { 
   list-style-type: none;
@@ -53,18 +48,13 @@ blockquote.main {
 
 p { font-size: 18px; }
 
-p.center { 
+.centered { 
   text-align: center; 
 }
 
 p#fortune-cookie { 
   font-size: 27px;
-  text-align: justify;
   font-weight: bold;
-}
-
-p#fortune-description { 
-  margin-top: 45px;
 }
 
 article a {
