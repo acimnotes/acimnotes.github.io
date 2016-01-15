@@ -15,8 +15,14 @@ header {
   font-family: 'Montserrat', Arial, sans-serif;
   margin-top: 45px;
   margin-bottom: 45px;
+  font-size: 1.5em;
 }
 
+/*article:hover {
+  cursor:pointer;
+  border: 0.1em solid aqua;
+}
+*/
 article { 
   text-align: justify;
   background-color: #F6F6F6;
@@ -39,7 +45,7 @@ blockquote {
   margin-bottom: 20px;
 }
 
-blockquote.main { 
+blockquote.main-quote { 
   border: none;
   padding-left: 0;
   font-style: italic;

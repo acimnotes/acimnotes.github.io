@@ -11,3 +11,12 @@ function load_fortune_cookie (fortunes) {
     document.getElementById("fortune-cookie").innerHTML    = fortune_quote;
     document.getElementById("fortune-book-link").innerHTML = fortune_book_link;
 }
+
+// var articles = document.getElementsByTagName("article")
+
+// for (var i in articles) { 
+//     var link = articles[i].getElementsByTagName("a")[0];
+//     articles[i].onclick = function () {
+//         link.click();
+//     }
+// }
