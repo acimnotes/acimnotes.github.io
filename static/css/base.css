@@ -13,8 +13,8 @@ div#wrap {
 
 header { 
   font-family: 'Montserrat', Arial, sans-serif;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 27px;
+  margin-bottom: 27px;
   font-size: 1.5em;
 }
 
@@ -52,15 +52,28 @@ blockquote.main-quote {
   margin-left: 20px;
 }
 
+h1,h2 { margin: 10 0 10 0}
+
 p { font-size: 18px; }
 
 .centered { 
   text-align: center; 
 }
 
+p.to-comments {
+  margin: 20px 0px 0px 0px;
+  text-align: center;
+}
+
 p#fortune-cookie { 
   font-size: 27px;
   font-weight: bold;
+}
+
+hr {
+   margin-top: 36px;
+   margin-bottom: 36px;
+   visibility: hidden;
 }
 
 article a {
