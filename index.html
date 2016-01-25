@@ -12,6 +12,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
 
   
+<style>
+  article:hover {
+    cursor:pointer;
+    border: 0.1em solid #CDCDCD;
+  }
+</style>
+
 </head>
 
 <body>
@@ -385,8 +392,17 @@
 <!-- start onload -->
   <script> 
     window.onload = function() {
+
       change_outer_links_targets(document.links);
+
         
+  var articles = document.getElementsByTagName("article");
+  for (var i in articles) {     
+      articles[i].onclick = function () {
+        var links = this.getElementsByTagName("a");
+        links[links.length - 1].click();
+      }
+  }
 
 
       // google analytics code
@@ -394,7 +410,6 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-72419206-1', 'auto');
       ga('send', 'pageview');
 
