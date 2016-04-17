@@ -49,10 +49,13 @@ blockquote.main-quote {
 
 h1,h2 {
   margin: 10 0 10 0;
-  letter-spacing: 0.0001em;
+  letter-spacing: 0.0001px;
 }
 
-p { font-size: 18px; }
+p { 
+  font-size: 20px;
+  letter-spacing: 0.0001px;
+}
 
 .centered { 
   text-align: center; 
