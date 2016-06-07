@@ -13,10 +13,10 @@ function load_fortune_cookie (fortunes) {
     document.getElementById("fortune-book-link").innerHTML = fortune_book_link;
 }
 
-var make_articles_clickable = function () {
-  var articles = document.getElementsByTagName("article");
-  for (var i in articles) {
-    articles[i].onclick = function () {
-        var links = this.getElementsByTagName("a");
-        links[links.length - 1].click(); }}  
-}
+// var make_articles_clickable = function () {
+//   var articles = document.getElementsByTagName("article");
+//   for (var i in articles) {
+//     articles[i].onclick = function () {
+//         var links = this.getElementsByTagName("a");
+//         links[links.length - 1].click(); }}  
+// }
