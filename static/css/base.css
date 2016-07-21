@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body { 
   font-family: 'Open Sans', Arial, sans-serif;  
   letter-spacing: 0.02rem; 
@@ -7,10 +12,26 @@ body {
 }
 
 div#wrap {
-  width: 720px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
+div#content {
+   display: flex;
+   justify-content: space-between;
+}
+div#notes {
+  max-width: 640px;  
+}
+
+div#tweets {
+  align-self: flex-start; /* prevents vertical fill up */
+  max-width: 250px;
+  background-color: #FBFBFB;
+  border: 0.1em solid #E0E0E0;
+  border-radius: 5px;
+}
+ 
 header { 
   font-family: 'Montserrat', Arial, sans-serif;
   margin-top: 27px;
@@ -20,7 +41,7 @@ header {
 
 article { 
   text-align: justify;
-  background-color: #FCFCFC;
+  background-color: #FBFBFB;
   margin-bottom: 20px;
   padding: 20px;
   border: 0.1em solid #E0E0E0;
@@ -29,7 +50,8 @@ article {
 
 ul { 
   list-style-type: none;
-  padding-left: 0px;
+  /*padding-left: 0px;*/
+  margin-top: 0px;
 }
 
 blockquote { 
@@ -48,11 +70,12 @@ blockquote.main-quote {
 }
 
 h1,h2 {
-  margin: 10 0 10 0;
+  /*margin: 10 0 10 0;*/
   letter-spacing: 0.0001px;
 }
 
 p { 
+  margin: 10px 10px;
   font-size: 20px;
   letter-spacing: 0.0003px;
   line-height: 1.4;
