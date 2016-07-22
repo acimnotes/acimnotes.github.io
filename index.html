@@ -8,8 +8,14 @@
   <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat'>
 
   <link rel="stylesheet" href="/static/css/base.css">
-
-  <script type="text/javascript" src="/static/js/my.js"></script>
+<!--  <script type="text/javascript" src="/static/js/my.js"> -->
+  <script>
+    function change_outer_links_targets (links) {
+    for (var index in links) {
+      if (links[index].hostname != window.location.hostname) {
+        links[index].target = '_blank'; }}
+    }
+  </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
 
@@ -423,7 +429,7 @@
 
 <!-- #tweets begin -->
 <div id="tweets">
-  <a class="twitter-timeline" data-theme="light" data-chrome="transparent nofooter" data-link-color="#2B7BB9" href="https://twitter.com/AcimNotes">Tweets by AcimNotes</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <a class="twitter-timeline" data-theme="light" data-chrome="transparent nofooter" data-size="large" data-link-color="#2B7BB9" href="https://twitter.com/AcimNotes">Tweets by AcimNotes</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 <!-- #tweets end -->
 

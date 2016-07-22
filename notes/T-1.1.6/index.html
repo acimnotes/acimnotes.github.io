@@ -10,8 +10,14 @@ ACIM notes
   <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat'>
 
   <link rel="stylesheet" href="/static/css/base.css">
-
-  <script type="text/javascript" src="/static/js/my.js"></script>
+<!--  <script type="text/javascript" src="/static/js/my.js"> -->
+  <script>
+    function change_outer_links_targets (links) {
+    for (var index in links) {
+      if (links[index].hostname != window.location.hostname) {
+        links[index].target = '_blank'; }}
+    }
+  </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
 
@@ -28,6 +34,7 @@ ACIM notes
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
+    js.async=true;
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
@@ -68,15 +75,22 @@ ACIM notes
 
     </section>
 
-    <!-- FB Like button -->
-    <div class="fb-like" 
-      data-href="https://facebook.com/ACIMnotes/"
-      data-width="200"
-      data-layout="button_count"
-      data-action="like"
-      data-show-faces="true"
-      data-share="false"
-      style="padding-top: 10px">
+    <div id="fb_buttons" style="padding-top: 10px">
+      <!-- FB Like button -->
+      <div class="fb-like" 
+        data-href="https://facebook.com/ACIMnotes/"
+        data-width="200"
+        data-layout="button_count"
+        data-action="like"
+        data-show-faces="true"
+        data-share="false">
+      </div>
+
+      <!-- FB Share button -->
+      <div class="fb-share-button" 
+        data-href="http://acimnotes.com/notes/T-1.1.6/" 
+        data-layout="button">
+      </div>
     </div>
 
   </article>
@@ -113,7 +127,8 @@ ACIM notes
     };
     
     (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');        
+        var d = document, s = d.createElement('script');
+        s.async = true;       
         s.src = '//acimnotes.disqus.com/embed.js';        
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);

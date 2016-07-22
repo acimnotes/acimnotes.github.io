@@ -8,8 +8,14 @@
   <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat'>
 
   <link rel="stylesheet" href="/static/css/base.css">
-
-  <script type="text/javascript" src="/static/js/my.js"></script>
+<!--  <script type="text/javascript" src="/static/js/my.js"> -->
+  <script>
+    function change_outer_links_targets (links) {
+    for (var index in links) {
+      if (links[index].hostname != window.location.hostname) {
+        links[index].target = '_blank'; }}
+    }
+  </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
 
@@ -65,6 +71,7 @@
 <li><p><a href='http://meetup.com/Unity-Center-of-Peace/' rel='nofollow'>Robert Tite</a> - Tuesdays 7:15 PM EST<br> skype account: <strong>robert.tite1</strong></p></li>
 <li><p><a href='http://servingyourjourney.com' rel='nofollow'>Robert Meagher</a> - Saturdays 7:00 PM EST<br> skype account: <strong>robert.meagher.03171966</strong></p></li>
 <li><p><a href='http://acim.house/group/' rel='nofollow'>Ron Cruickshank</a> - Saturdays 9:00 PM EST<br> skype account: <strong>ron.cruickshank1</strong></p></li>
+<li><p><a href='http://miracleshare.org/profile/CorinneZupko' rel='nofollow'>Corinne Zupko</a> - Sundays 8:00 PM EST<br> phone group</p></li>
 </ul>
 
 <p class='centered' style='margin-top:30px;'>You know more ACIM online study groups? Shout out the contacts here:</p> <p class='centered'><a href='https://twitter.com/intent/tweet?screen_name=ACIMnotes' class='twitter-mention-button' data-size='large' data-related='AcimNotes'>Tweet to @ACIMnotes</a></p>

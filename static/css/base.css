@@ -11,6 +11,11 @@ body {
   overflow-y:scroll;
 }
 
+
+.timeline-Tweet-text {
+  font-size: 16px;
+}
+
 div#wrap {
   max-width: 700px;
   margin: 0 auto;
