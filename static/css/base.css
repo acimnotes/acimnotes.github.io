@@ -26,7 +26,7 @@ div#content {
    justify-content: space-between;
 }
 div#notes {
-  max-width: 640px;  
+  max-width: 650px;  
 }
 
 div#tweets {
@@ -36,7 +36,15 @@ div#tweets {
   border: 0.1em solid #E0E0E0;
   border-radius: 5px;
 }
- 
+
+div#fb-page {
+  align-self: flex-start; /* prevents vertical fill up */
+  max-width: 445px;
+  background-color: #FBFBFB;
+  border: 0.1em solid #E0E0E0;
+  border-radius: 5px;
+}
+
 header { 
   font-family: 'Montserrat', Arial, sans-serif;
   margin-top: 27px;
