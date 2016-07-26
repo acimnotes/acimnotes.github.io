@@ -29,14 +29,6 @@ div#notes {
   max-width: 650px;  
 }
 
-div#tweets {
-  align-self: flex-start; /* prevents vertical fill up */
-  max-width: 250px;
-  background-color: #FBFBFB;
-  border: 0.1em solid #E0E0E0;
-  border-radius: 5px;
-}
-
 div#fb-page {
   align-self: flex-start; /* prevents vertical fill up */
   max-width: 445px;
