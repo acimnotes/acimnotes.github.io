@@ -17,6 +17,15 @@ ACIM notes
       if (links[index].hostname != window.location.hostname) {
         links[index].target = '_blank'; }}
     }
+
+  function $ (selector) {
+    var elements = document.querySelectorAll(selector);
+    if (elements.length > 0) {
+      return (elements.length === 1) ? elements[0] : elements;
+    }    
+    return null;
+  }
+
   </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
@@ -54,6 +63,15 @@ ACIM notes
             <a href="/info/healing/">healing</a>
           </h2>
         </nav>
+
+        <script>      
+            //nav menu highlight active-page        
+            $('nav a').forEach( function (a) {
+              if ( a.getAttribute('href') === document.location.pathname ) {
+                a.classList.add("active-page");
+              }
+            })
+        </script>
         
       </header>
 
@@ -68,9 +86,9 @@ ACIM notes
     </blockquote>
 
     <section>
-      <p><strong>How many times you thought a heavy bank account will make you happy? How many times you thought the same about mercedes or career, romantic lover, fame or children and villa on a sheer? You might have also had some reveries that drinking alcohol will do or using drugs of any kind. Dig deep in this idea: what is it that you really want? If you look good enough you&#39;ll see the only reason why you&#39;re seeking all those things -- the joy is tied to them within your mind and it is joy indeed you really want. And yet, how many times your idols failed you? Weren&#39;t you shocked by the amount of side effects they bring? You thought a zillion coins will give you peace and happiness but what you&#39;ve got is constant worry and distress. Is it not time for you stop chasing carrots but focus on your real goal instead?</strong></p>
+      <p>How many times you thought a heavy bank account will make you happy? How many times you thought the same about mercedes or career, romantic lover, fame or children and villa on a sheer? You might have also had some reveries that drinking alcohol will do or using drugs of any kind. Dig deep in this idea: what is it that you really want? If you look good enough you&#39;ll see the only reason why you&#39;re seeking all those things -- the joy is tied to them within your mind and it is joy indeed you really want. And yet, how many times your idols failed you? Weren&#39;t you shocked by the amount of side effects they bring? You thought a zillion coins will give you peace and happiness but what you&#39;ve got is constant worry and distress. Is it not time for you stop chasing carrots but focus on your real goal instead?</p>
 
-<p><strong>If you would look on anyone more closely to figure out their motivation and what exactly makes them tick, you&#39;ll be surprised to see that you are not the only one who&#39;s chasing happiness, it is at root for anyone indeed. There is no difference between a mother of a baby and user of some drug except in ways they&#39;re looking for it: the mother plans to get it from her baby the other - from the drug. Even the biggest tyrants you can name were doing what they&#39;ve done only because they honestly believed: this is the way to joy. And so the universal goal is equal but everyone has a unique and special plan on how to get it, a map their very own. However if you have dared to lift this heavy brick of paper it means you are among of those who&#39;ve started to suspect: your plan has failed.</strong></p>
+<p>If you would look on anyone more closely to figure out their motivation and what exactly makes them tick, you&#39;ll be surprised to see that you are not the only one who&#39;s chasing happiness, it is at root for anyone indeed. There is no difference between a mother of a baby and user of some drug except in ways they&#39;re looking for it: the mother plans to get it from her baby the other - from the drug. Even the biggest tyrants you can name were doing what they&#39;ve done only because they honestly believed: this is the way to joy. And so the universal goal is equal but everyone has a unique and special plan on how to get it, a map their very own. However if you have dared to lift this heavy brick of paper it means you are among of those who&#39;ve started to suspect: your plan has failed.</p>
 
 <blockquote>
 <p>what you seek for is a source of joy as you conceive it. <a href="https://via.hypothes.is/http://www.miraclecenter.org/a-course-in-miracles/T-24.V.php">T-24.5.1</a></p>

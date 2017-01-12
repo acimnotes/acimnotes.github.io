@@ -17,6 +17,15 @@ ACIM notes
       if (links[index].hostname != window.location.hostname) {
         links[index].target = '_blank'; }}
     }
+
+  function $ (selector) {
+    var elements = document.querySelectorAll(selector);
+    if (elements.length > 0) {
+      return (elements.length === 1) ? elements[0] : elements;
+    }    
+    return null;
+  }
+
   </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
@@ -54,6 +63,15 @@ ACIM notes
             <a href="/info/healing/">healing</a>
           </h2>
         </nav>
+
+        <script>      
+            //nav menu highlight active-page        
+            $('nav a').forEach( function (a) {
+              if ( a.getAttribute('href') === document.location.pathname ) {
+                a.classList.add("active-page");
+              }
+            })
+        </script>
         
       </header>
 
@@ -68,7 +86,7 @@ ACIM notes
     </blockquote>
 
     <section>
-      <p><strong>&quot;Forgiveness is the central theme that runs throughout salvation, holding all its parts in meaningful relations, the course it runs directed, and its outcome sure.&quot;</strong> <a href="https://via.hypothes.is/http://www.miraclecenter.org/a-course-in-miracles/W-pI.169.php?dig=central">W-169.12</a></p>
+      <p>&quot;Forgiveness is the central theme that runs throughout salvation, holding all its parts in meaningful relations, the course it runs directed, and its outcome sure.&quot; <a href="https://via.hypothes.is/http://www.miraclecenter.org/a-course-in-miracles/W-pI.169.php?dig=central">W-169.12</a></p>
 
 <blockquote>
 <p>This ... course ... is concerned only with Atonement, or the correction of perception. The means of the Atonement is forgiveness. <a href="https://via.hypothes.is/http://miraclecenter.org/a-course-in-miracles/C-In.php">C-In.1</a></p>

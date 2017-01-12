@@ -17,6 +17,15 @@ ACIM notes
       if (links[index].hostname != window.location.hostname) {
         links[index].target = '_blank'; }}
     }
+
+  function $ (selector) {
+    var elements = document.querySelectorAll(selector);
+    if (elements.length > 0) {
+      return (elements.length === 1) ? elements[0] : elements;
+    }    
+    return null;
+  }
+
   </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
@@ -54,6 +63,15 @@ ACIM notes
             <a href="/info/healing/">healing</a>
           </h2>
         </nav>
+
+        <script>      
+            //nav menu highlight active-page        
+            $('nav a').forEach( function (a) {
+              if ( a.getAttribute('href') === document.location.pathname ) {
+                a.classList.add("active-page");
+              }
+            })
+        </script>
         
       </header>
 
@@ -68,9 +86,9 @@ ACIM notes
     </blockquote>
 
     <section>
-      <p><strong>This brings the light to yet another facet of the diamond which genuine forgiveness is: you practice not in it alone. Your willingness and your allowance are the key to let Divinity step in.</strong></p>
+      <p>This brings the light to yet another facet of the diamond which genuine forgiveness is: you practice not in it alone. Your willingness and your allowance are the key to let Divinity step in.</p>
 
-<p><strong>The seekers scroll through stacks of books and pick the things they liked from each to cook their own salvation&#39;s recipe. But if it&#39;s you who is in charge of your atonement, then why you&#39;re not enlightened still?</strong></p>
+<p>The seekers scroll through stacks of books and pick the things they liked from each to cook their own salvation&#39;s recipe. But if it&#39;s you who is in charge of your atonement, then why you&#39;re not enlightened still?</p>
 
 <blockquote>
 <p>You have not made truth, but truth can still set you free. Look as the Holy Spirit looks, and understand as He understands. His understanding looks back to God in remembrance of me. <a href="https://via.hypothes.is/http://miraclecenter.org/a-course-in-miracles/T-5.III.php">T-5.3.11</a></p>

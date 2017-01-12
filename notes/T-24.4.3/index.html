@@ -17,6 +17,15 @@ ACIM notes
       if (links[index].hostname != window.location.hostname) {
         links[index].target = '_blank'; }}
     }
+
+  function $ (selector) {
+    var elements = document.querySelectorAll(selector);
+    if (elements.length > 0) {
+      return (elements.length === 1) ? elements[0] : elements;
+    }    
+    return null;
+  }
+
   </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
@@ -54,6 +63,15 @@ ACIM notes
             <a href="/info/healing/">healing</a>
           </h2>
         </nav>
+
+        <script>      
+            //nav menu highlight active-page        
+            $('nav a').forEach( function (a) {
+              if ( a.getAttribute('href') === document.location.pathname ) {
+                a.classList.add("active-page");
+              }
+            })
+        </script>
         
       </header>
 
@@ -68,7 +86,7 @@ ACIM notes
     </blockquote>
 
     <section>
-      <p><strong>This can&#39;t be further emphasized! Remove the pieces off the board, look past all bodies and ask to realize the truth.</strong></p>
+      <p>This can&#39;t be further emphasized! Remove the pieces off the board, look past all bodies and ask to realize the truth.</p>
 
 <blockquote>
 <p>If you further recognize that you are part of God, you will understand why it is that you always attack yourself first. All attack is Self attack. It cannot be anything else. <a href="https://via.hypothes.is/http:/miraclecenter.org/a-course-in-miracles/T-10.II.php">T-10.2.4</a></p>

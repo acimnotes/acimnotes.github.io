@@ -17,6 +17,15 @@ ACIM notes
       if (links[index].hostname != window.location.hostname) {
         links[index].target = '_blank'; }}
     }
+
+  function $ (selector) {
+    var elements = document.querySelectorAll(selector);
+    if (elements.length > 0) {
+      return (elements.length === 1) ? elements[0] : elements;
+    }    
+    return null;
+  }
+
   </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
@@ -54,6 +63,15 @@ ACIM notes
             <a href="/info/healing/">healing</a>
           </h2>
         </nav>
+
+        <script>      
+            //nav menu highlight active-page        
+            $('nav a').forEach( function (a) {
+              if ( a.getAttribute('href') === document.location.pathname ) {
+                a.classList.add("active-page");
+              }
+            })
+        </script>
         
       </header>
 
@@ -68,7 +86,7 @@ ACIM notes
     </blockquote>
 
     <section>
-      <p><strong>The steps you make in this direction produce consequences you cannot comprehend. Amazing things will happen when you are willing to be guided, and ask the Gentle Titan instead of following YOUR plan.</strong></p>
+      <p>The steps you make in this direction produce consequences you cannot comprehend. Amazing things will happen when you are willing to be guided, and ask the Gentle Titan instead of following YOUR plan.</p>
 
     </section>
 

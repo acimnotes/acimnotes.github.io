@@ -17,6 +17,15 @@ ACIM notes
       if (links[index].hostname != window.location.hostname) {
         links[index].target = '_blank'; }}
     }
+
+  function $ (selector) {
+    var elements = document.querySelectorAll(selector);
+    if (elements.length > 0) {
+      return (elements.length === 1) ? elements[0] : elements;
+    }    
+    return null;
+  }
+
   </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
@@ -54,6 +63,15 @@ ACIM notes
             <a href="/info/healing/">healing</a>
           </h2>
         </nav>
+
+        <script>      
+            //nav menu highlight active-page        
+            $('nav a').forEach( function (a) {
+              if ( a.getAttribute('href') === document.location.pathname ) {
+                a.classList.add("active-page");
+              }
+            })
+        </script>
         
       </header>
 
@@ -68,9 +86,9 @@ ACIM notes
     </blockquote>
 
     <section>
-      <p><strong>This is a very crucial topic. Fear stands among the leaders of bad decisions&#39; motivators so when you&#39;ll grasp the depth of meaning for this subject your life will never be the same.</strong></p>
+      <p>This is a very crucial topic. Fear stands among the leaders of bad decisions&#39; motivators so when you&#39;ll grasp the depth of meaning for this subject your life will never be the same.</p>
 
-<p><strong>Let us consider briefly what reasons make you scared. First and foremost you must be thinking that this event or person is absolutely real. The follow up is the idea: this situation threatens you somehow. And final step to get you frightened is to assure you that you have no control.</strong></p>
+<p>Let us consider briefly what reasons make you scared. First and foremost you must be thinking that this event or person is absolutely real. The follow up is the idea: this situation threatens you somehow. And final step to get you frightened is to assure you that you have no control.</p>
 
 <p><strong>The combination of these reasons leads you to conclusion you might become a victim so you need react preventively right now. This is a very nasty hook which you can dodge by realizing: all of those statements are equally untrue.</strong></p>
 

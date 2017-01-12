@@ -15,6 +15,15 @@
       if (links[index].hostname != window.location.hostname) {
         links[index].target = '_blank'; }}
     }
+
+  function $ (selector) {
+    var elements = document.querySelectorAll(selector);
+    if (elements.length > 0) {
+      return (elements.length === 1) ? elements[0] : elements;
+    }    
+    return null;
+  }
+
   </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
@@ -46,6 +55,15 @@ div#content {
             <a href="/info/healing/">healing</a>
           </h2>
         </nav>
+
+        <script>      
+            //nav menu highlight active-page        
+            $('nav a').forEach( function (a) {
+              if ( a.getAttribute('href') === document.location.pathname ) {
+                a.classList.add("active-page");
+              }
+            })
+        </script>
         
       </header>
 
@@ -69,7 +87,7 @@ div#content {
 
 <p>Traditional regression therapy is considered by many as controversial. Also it&#39;s quite expensive. That&#39;s why I offer my ACIM-based regression sessions for as cheap as your donation. You decide how much you pay me and you pay ONLY if you will find the session helpful to you.</p>
 
-<p>From my experience, regression works best when you have a &quot;spring board&quot; -- some painful issue, whether it&#39;s a relationship or your body&#39;s sickness, that bothers you but which you cannot solve by other means. Eventually it all boils down to ACIM&#39;s genuine forgiveness, which all course&#39;s students have heard about but, as with any studying, to learn it in theory and to realize it in experience is not quite the same thing.</p>
+<p>From my experience, regression works best when you have a &quot;spring board&quot; -- some painful issue, whether it&#39;s a relationship or your body&#39;s sickness, that bothers you but which you cannot solve by other means. Eventually it all boils down to ACIM&#39;s <em>genuine forgiveness</em>, which all course&#39;s students have heard about and yet, as with any studying, to learn it in theory and to realize it in experience is not quite the same thing.</p>
 
 <p>This is your chance to dive deeper into the course and to join with your brother for the unified purpose of atonement, take it. </p>
 
