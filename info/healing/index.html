@@ -4,7 +4,8 @@
     Healing - ACIM notes
   </title>
 
-  <link rel='stylesheet'href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600'>
+  <!-- <link rel='stylesheet'href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600'> -->
+  <link rel='stylesheet'href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic'>
   <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat'>
 
   <link rel="stylesheet" href="/static/css/base.css">
@@ -48,16 +49,16 @@ div#content {
         
         <nav>
           <h2>
-            <a href="/">notes</a>&thinsp;
-            <a href="/fortune-cookies/" title="random quote from ACIM">fortunes</a>&thinsp;            
-            <a href="/info/study-groups/">groups</a>&thinsp;
-            <a href="/info/about/">about</a>&thinsp;            
-            <a href="/info/healing/">healing</a>
+            <a href="/" title='my notes about ACIM'>notes</a>&thinsp;
+            <a href="/fortune-cookies/" title="random quote from ACIM">fortunes</a>&thinsp;
+            <a href="/info/study-groups/" title='online study groups'>groups</a>&thinsp;
+            <a href="/info/about/">about</a>&thinsp;
+            <a href="/info/healing/" title='ACIM in practice'>healing</a>
           </h2>
         </nav>
 
         <script>      
-            //nav menu highlight active-page        
+            //nav menu highlight the active page        
             $('nav a').forEach( function (a) {
               if ( a.getAttribute('href') === document.location.pathname ) {
                 a.classList.add("active-page");

@@ -70,6 +70,7 @@ blockquote {
   font-style: italic;
   margin-left: 20px;
   margin-bottom: 20px;
+  margin-top: 36px;
 }
 
 blockquote.main-quote { 
@@ -86,7 +87,7 @@ h1,h2 {
 
 p { 
   margin: 10px 10px;
-  font-size: 20px;
+  font-size: 21px;
   letter-spacing: 0.0003px;
   line-height: 1.4;
 }
@@ -102,7 +103,7 @@ p.to-comments {
 
 p#fortune-cookie { 
   font-size: 27px;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 
 hr {
