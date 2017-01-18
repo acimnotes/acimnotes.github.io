@@ -14,9 +14,9 @@ ACIM notes
 <!--  <script type="text/javascript" src="/static/js/my.js"> -->
   <script>
     function change_outer_links_targets (links) {
-    for (var index in links) {
-      if (links[index].hostname != window.location.hostname) {
-        links[index].target = '_blank'; }}
+      for (var index in links) {
+        if (links[index].hostname != window.location.hostname) {
+          links[index].target = '_blank'; }}
     }
 
   function $ (selector) {
@@ -26,7 +26,6 @@ ACIM notes
     }    
     return null;
   }
-
   </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
@@ -73,12 +72,14 @@ div#content {
         </nav>
 
         <script>      
-            //nav menu highlight the active page        
-            $('nav a').forEach( function (a) {
-              if ( a.getAttribute('href') === document.location.pathname ) {
-                a.classList.add("active-page");
-              }
-            })
+          //nav menu highlight the active page        
+          nav_links = $('nav a');
+          for (var i = 0; i < nav_links.length; i++) {
+            if ( nav_links[i].getAttribute('href') === document.location.pathname ) {
+              nav_links[i].classList.add("active-page");
+              break;
+            }
+          }
         </script>
         
       </header>
@@ -121,7 +122,7 @@ div#content {
 
       <!-- FB Share button -->
       <div class="fb-share-button" 
-        data-href="http://acimnotes.com/notes/T-1.1.25/" 
+        data-href="http://acimnotes.gq/notes/T-1.1.25/" 
         data-layout="button">
       </div>
     </div>
@@ -141,6 +142,7 @@ div#content {
         
   </div>
   
+
 <!-- start onload -->
   <script> 
     window.onload = function() {
@@ -172,7 +174,7 @@ div#content {
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-72419206-1', 'auto');
+      ga('create', 'UA-90571826-1', 'auto');
       ga('send', 'pageview');
 
     }
