@@ -15,22 +15,14 @@ body {
 
 
 .timeline-Tweet-text {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 div#wrap {
   /*max-width: 700px;*/
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 960px;
   margin: 0 auto;
-}
-
-div#content {
-  display: flex;
-  justify-content: space-between;
-}
-div#notes {
-  max-width: 610px;  
 }
 
 header { 
@@ -83,7 +75,7 @@ h1,h2 {
 
 p { 
   margin: 10px 10px;
-  font-size: 22px;
+  font-size: 1.3rem;
   letter-spacing: 0.0003px;
   line-height: 1.4;
 }
@@ -126,15 +118,28 @@ a {
   text-decoration: none;
 }
 
-div#fb-page {
+div#content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;  
+}
+
+div#fb-page {  
   height: 1800px;
   align-self: flex-start; /* prevents vertical fill up */
-  min-width: 340px;
+  min-width: 330px;
   /*max-width: 340px;*/
   max-height: 1800px;
   background-color: #FBFBFB;
   border: 0.1em solid #E0E0E0;
   border-radius: 5px;
+
+  margin-left: 5px;  
+  width: 330px;
+}
+
+div#notes {
+  /*max-width: 610px;*/  
 }
 
 
@@ -142,8 +147,8 @@ div#fb-page {
 /*@media only screen */
 @media (max-device-width : 600px), (orientation: portrait) {
   div#content {
-    flex-direction: column-reverse;
-    /*align-items: flex-start;*/
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   div#notes {
@@ -152,16 +157,21 @@ div#fb-page {
   }
 
   div#fb-page {
-      min-width: 360px;
+      width: 310px;
       max-height: 600px;
       align-self: center;
       margin-bottom: 30px;
-    }
+  }
+
+  iframe {
+    width: 310px;
+    height: 600px;
+  }
 
   article {
     padding: 0px;
   }
   p {
-    font-size: 150% !important;
+    font-size: 130% !important;
   }
 }
