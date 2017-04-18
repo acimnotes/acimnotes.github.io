@@ -115,11 +115,18 @@ ul {
       background-position: center;
       background-size: cover;
     }
+
+
 }
 
 @media (min-device-width : 1000px) {
   #what-we-do ul {
     padding-left: 130px;
+  }
+
+  #order {
+    width:50%;
+    margin:auto;
   }
 }
 
