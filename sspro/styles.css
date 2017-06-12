@@ -11,6 +11,13 @@
   background-color: #FEA723 !important;
 }
 
+/*#what-we-do ul li p {
+    position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}*/
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
@@ -58,7 +65,7 @@ body {
 }
 
 .showcase p {
-  font-size: 1.51em;
+  font-size: 1.71em;
   padding-bottom: 2%;
 }
 
@@ -76,7 +83,11 @@ body {
 }
 
 .section h3 {
-  font-weight: 600;
+  /* font-weight: 600; */
+  font-family: 'Prosto One';
+  font-size: 40px;
+  
+  
 }
 
 ul {
@@ -120,8 +131,9 @@ ul {
 }
 
 @media (min-device-width : 1000px) {
-  #what-we-do ul {
-    padding-left: 130px;
+  #what-we-do .features {
+    max-width: 72%;
+    margin: auto;
   }
 
   #order {
@@ -143,6 +155,13 @@ ul {
     opacity: 0.85;
 }*/
 
+
+@font-face {
+  font-family: 'Ronduit';
+  src: url('/font/RonduitCapitals-Light.otf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* FONTELLO FONTS */
 
