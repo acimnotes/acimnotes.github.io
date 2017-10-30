@@ -69,11 +69,13 @@ blockquote.main-quote {
   font-style: normal;
   font-weight: 600;
   margin-left: 0px;
+  margin: 0px;
 }
 
 h1,h2 {
   /*margin: 10 0 10 0;*/
   letter-spacing: 0.0001px;
+  line-height: 0.9em;
 }
 
 p { 
@@ -88,7 +90,7 @@ p {
 }
 
 p.to-comments {
-  margin: 10px 0px 10px 0px;
+  margin: 0;
   text-align: center;
 }
 
