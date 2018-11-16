@@ -12,7 +12,7 @@
   <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat'>
   <!-- <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat&text=ACIM%20notes'> -->
 
-  <link rel="stylesheet" href="/static/css/bassse.css">
+  <link rel="stylesheet" href="/static/css/bas.css">
 <!--  <script type="text/javascript" src="/static/js/my.js"> -->
   <script>
     function change_outer_links_targets (links) {
@@ -89,13 +89,17 @@
 
 <div id='content'>
   <div>  <article>
-          <div>
-              <p id="fortune-cookie"></p>
-              <p id="fortune-book-link" class="centered"></p>
+          <div style="display:flex;flex-direction:column;min-height:190px;">
+              <p id="fortune-cookie" style="font-size:120%;"></p>
+              <p style="flex-grow:1;font-style:italic;font-size:100%;"> &nbsp;&nbsp;&mdash; <span id="fortune-book-link"></span></p>
+              
+              <a href="#" onclick="load_fortune_cookie(fortunes);">
+                <p class="centered">Get another quote</p>
+              </a>
               
               <noscript>
                   <p class="centered">Nothing real can be threatened. Nothing ureal exists.</p>
-                  <p class="centered">(Text, page 1)</p>
+                  <p>-- (Text, page 1)</p>
                   <p>This page requires Javasript to generate random guotes.</p>
               </noscript>
   
