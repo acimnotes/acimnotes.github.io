@@ -14,7 +14,7 @@
   <!-- <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat&text=ACIM%20notes'> -->
 
   <link rel="stylesheet" href="/static/css/bas.css">
-<!--  <script type="text/javascript" src="/static/js/my.js"> -->
+  <!--  <script type="text/javascript" src="/static/js/my.js"> -->
   <script>
     function change_outer_links_targets (links) {
       for (var index in links) {
@@ -41,7 +41,7 @@
     function load_fortune_cookie (fortunes) {
         var random = Math.floor( Math.random() * fortunes.length );
         $("#fortune-cookie").innerHTML    = fortunes[random]["quote"];
-        $("#fortune-book-link").innerHTML = fortunes[random]["book_link"];
+        $("#fortune-book-link").innerHTML = "&nbsp;&nbsp;&mdash; " + fortunes[random]["book_link"];
     }
 </script>
 
@@ -56,7 +56,7 @@
 
 <body>
 
-
+  
 
   <div id="wrap">
       <header class="centered">
@@ -97,26 +97,26 @@
 
 <div id='content'>
   <div>  <article>
-          <div style="display:flex;flex-direction:column;min-height:190px;">
-              <p id="fortune-cookie" style="font-size:120%;"></p>
-              <p style="flex-grow:1;font-style:italic;font-size:100%;"> &nbsp;&nbsp;&mdash; <span id="fortune-book-link"></span></p>
+          <div style="display:flex;flex-direction:column;min-height:14em;">
+              <p id="fortune-cookie" style="flex-grow:1;font-size:120%;"></p>
+              <p style="font-style:italic;font-size:100%;"> <span id="fortune-book-link"></span></p>
               
               <a href="#" onclick="load_fortune_cookie(fortunes);">
-                <p class="centered">Get another quote</p>
+                <p class="centered">Get Quote</p>
               </a>
               
               <noscript>
                   <p class="centered">Nothing real can be threatened. Nothing ureal exists.</p>
-                  <p>-- (Text, page 1)</p>
-                  <p>This page requires Javasript to generate random guotes.</p>
+                  <p>&nbsp;&nbsp;&mdash; Text, page 1</p>
+                  <p style="font-color:red;>This page requires Javasript to generate random guotes.</p>
               </noscript>
   
           </div>
       </article>
   
-      <p class="centered" style="margin-top:45px;">reading <a href="/fortune-cookies/">ACIM Fortune Cookies</a> is a nice way to end your study group's meetings when each student gets a random quote from the book to have an aftertaste.</p>
+      <p class="centered" style="margin-top:45px;">reading these "fortune cookies" is a nice way to end your study group's meetings to reflect on a random quote from the book to have an aftertaste.</p>
     
-      <p class="centered" style="margin-top:30px;">Whant to see your favorite quote here? Shout it out to <a href="http://facebook.com/ACIMnotes">ACIMnotes' Facebook page</a>.</p>
+      <p class="centered" style="margin-top:30px;">Whant to see your favorite quote here? Shout it out to <a href="http://facebook.com/cenntra.one">this Facebook page</a>.</p>
       <!-- <p class="centered"><a href="https://twitter.com/intent/tweet?screen_name=ACIMnotes" class="twitter-mention-button" data-size="large" data-related="AcimNotes">Tweet to @ACIMnotes</a></p></div> -->
 </div>
 
@@ -126,14 +126,14 @@
   </div>
   
 
-<!-- start onload -->
+  <!-- start onload -->
   <script> 
     window.onload = function() {
 
       change_outer_links_targets(document.links);
 
           
-    load_fortune_cookie(fortunes);
+    //load_fortune_cookie(fortunes);
 
     <!-- twitter button -->
     //!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=true;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
