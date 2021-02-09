@@ -20,7 +20,8 @@
     function change_outer_links_targets (links) {
       for (var index in links) {
         if (links[index].hostname != window.location.hostname) {
-          links[index].target = '_blank'; }}
+          links[index].target = '_blank'; }
+      }
     }
 
     function $ (selector) {
@@ -102,13 +103,13 @@
               
               <a href="#" onclick="load_fortune_cookie(fortunes);">
                 <p class="centered" style="font-size:140%">Get Quote</p>
-              </a>              
+              </a>
               <noscript>
                   <p class="centered">Nothing real can be threatened. Nothing ureal exists.</p>
                   <p>&nbsp;&nbsp;&mdash; Text, page 1</p>
-                  <p style="font-color:red;>This page requires Javasript to generate random guotes.</p>
+                  <p style="font-color:red;">This page requires Javasript to generate random guotes.</p>
               </noscript>
-  
+
          </article>
   
       <p class="centered" style="margin-top:45px;">Reading a random quote from the book is a nice way to end your study group's meetings. <br/>

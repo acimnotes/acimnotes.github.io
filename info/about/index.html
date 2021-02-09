@@ -20,7 +20,8 @@
     function change_outer_links_targets (links) {
       for (var index in links) {
         if (links[index].hostname != window.location.hostname) {
-          links[index].target = '_blank'; }}
+          links[index].target = '_blank'; }
+      }
     }
 
     function $ (selector) {
