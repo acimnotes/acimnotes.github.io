@@ -20,6 +20,10 @@ header {
   font-size: 1.5em;
 }
 
+nav {
+  margin-top: 1em;
+}
+
 footer { 
   margin-top: 37px;
   margin-bottom: 67px;
