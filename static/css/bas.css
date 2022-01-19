@@ -74,7 +74,14 @@ blockquote.main-quote {
 }
 
 #fortune {
-  max-width: 960px;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+#fortune article {
+  width: 700px;
+  min-height: 15em;
 }
 
 h1,h2 {
@@ -146,7 +153,7 @@ div#wrap {
   margin: 0 auto;
 }
 
-div#content {  /*
+/*div#content {  
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -192,8 +199,12 @@ div#content {  /*
     font-size: 1.5em;    
   }
 
-  #fortune {
+  /* #fortune {
     max-width: 90%;
+  } */
+  #fortune article {
+    width: 100%;
+    padding: 0;
   }
 
 /*  #fb-page {
