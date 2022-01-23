@@ -52,35 +52,53 @@
     //     // else return 4;  //probability 0.1
 
     //  NEW VERSION
-    function load_fortune_cookie () {
+    function get_cookie () {
+      // generate random id and check it's new.
       while (true) {
-
           // 60% chance to pick an uplifting quote.
           var tone   = Math.random() < 0.61 ? "1" : "0"
-          var i      = Math.floor( Math.random() * fortunes[tone].length)
-          var choice = tone + '-' + i.toString()
+          var id     = Math.floor( Math.random() * fortunes[tone].length)
+          var choice = tone + '-' + id.toString()
           //console.log("chosen quote:" + choice)
 
           if (shown_quotes.hasOwnProperty(choice)) {
-              console.log("skipped prevoiusly chosen quote:" + choice)
-
-              if (Object.keys(shown_quotes).length > 300) {
-                  alert("Thank you for your interest in these quotes.")
-                  $('button.centered').disabled = true
-                  // $("button.centered").hidden = true
-                  // delete fortunes
-                  fortunes = {}
+              // console.log("skipped prevoiusly chosen quote:" + choice)
+              if (Object.keys(shown_quotes).length < 300) {
+                  continue
               }
-              continue
+              // happy ending.
+              alert("Thank you for your interest in these quotes.")
+              $('#fortune button').disabled = true
+              fortunes = {}
+              
+              break
           }
           
           shown_quotes[choice] = true
 
-          $("#fortune-cookie")   .innerHTML = fortunes[tone][i]["quote"]
-          $("#fortune-book-link").innerHTML = html_dash + fortunes[tone][i]["book_id"]
+          $("#fortune-cookie")   .innerHTML = fortunes[tone][id]["quote"]
+          $("#fortune-book-link").innerHTML = html_dash + fortunes[tone][id]["book_id"]
+
+          $("#fortune-cookie")   .style.opacity = 1
+          $("#fortune-book-link").style.opacity = 1
      
           break
       }
+    }
+
+    function load_fortune_cookie () {
+
+      if ( $("#fortune-cookie").style.opacity != 0 ) {        
+          $("#fortune-cookie")   .style.opacity = 0
+          $("#fortune-book-link").style.opacity = 0
+          // wait 0.7s till it fades away then generate new quote.
+          setTimeout(get_cookie, 700)
+      }
+      // console.log("FIRST time the button is pressed branch")
+      // console.log($("#fortune-cookie").style.opacity)
+      // console.log(typeof $("#fortune-cookie").style.opacity)
+      get_cookie()          
+      return
     }
     
     // OLD VERSION
@@ -144,14 +162,15 @@
 <!-- <div id='content'> -->
     <div id="fortune">
         <article>
+
             <p id="fortune-cookie" style="margin-top:1em;flex-grow:1;font-size:120%;"></p>
-            <p style="font-style:italic;font-size:100%;"> <span id="fortune-book-link"></span></p>
+            <p id="fortune-book-link" style="font-style:italic;font-size:100%;"></p>
              
-            <p class="centered">
+            <!-- <p class="centered"> -->
             <!-- <a href="#" onclick="load_fortune_cookie();"> -->
-              <button class="centered" onclick="load_fortune_cookie()">Get a Fortune Cookie</button>
+              <button style="align-self: center;" onclick="load_fortune_cookie()">Get a Fortune Cookie</button>
             <!-- </a> -->
-            </p>
+            <!-- </p> -->
 
             <noscript>
                 <p class="centered">Nothing real can be threatened. Nothing ureal exists.</p>

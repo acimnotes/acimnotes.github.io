@@ -84,6 +84,11 @@ blockquote.main-quote {
   min-height: 15em;
 }
 
+#fortune p {
+  transition: opacity 0.7s ease-out;
+  opacity: 0;
+}
+
 h1,h2 {
   letter-spacing: 0.0001px;
   line-height: 0.9em;
