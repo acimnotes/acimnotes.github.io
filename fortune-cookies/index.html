@@ -88,17 +88,18 @@
 
     function load_fortune_cookie () {
 
-      if ( $("#fortune-cookie").style.opacity != 0 ) {        
+      if ( $("#fortune-cookie").style.opacity != 0 ) {
+        
           $("#fortune-cookie")   .style.opacity = 0
           $("#fortune-book-link").style.opacity = 0
           // wait 0.7s till it fades away then generate new quote.
           setTimeout(get_cookie, 700)
+          return
       }
       // console.log("FIRST time the button is pressed branch")
       // console.log($("#fortune-cookie").style.opacity)
       // console.log(typeof $("#fortune-cookie").style.opacity)
-      get_cookie()          
-      return
+      get_cookie()
     }
     
     // OLD VERSION
