@@ -1,0 +1,269 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body { 
+  /*font-family: 'Open Sans', Arial, sans-serif;*/
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.02rem; 
+  color: #454545;
+  background-color: #F7F6EA;
+  overflow-y:scroll;
+}
+
+header { 
+  /* font-family: 'Montserrat', Arial, sans-serif; */
+  font-family: Georgia, system-ui;
+  margin-top: 27px;
+  margin-bottom: 27px;
+  font-size: 120%;
+}
+
+nav {
+  margin-top: 1em;
+}
+
+footer { 
+  margin-top: 37px;
+  margin-bottom: 67px;
+}
+
+article { 
+  display: flex;
+  flex-direction: column;
+
+  text-align: justify;
+  background-color: #FBFBFB;
+  /*margin-bottom: 1.5em;*/
+  padding: 10px;
+  border: 0.1em solid #E0E0E0;
+  border-radius: 5px;
+}
+
+ul { 
+  list-style-type: none;
+  margin-top: 0px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li+li {
+  margin-left: 20px;
+}
+
+blockquote { 
+  border-left: 3px solid #f0f0f0;
+  padding-left: 0.7em;
+  font-style: italic;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+blockquote.main-quote { 
+  border: none;
+  padding-left: 0;
+  font-style: normal;
+  font-weight: 600;
+  margin-left: 0px;
+  margin: 0px;
+}
+
+#fortune {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+#fortune article {
+  width: 700px;
+  min-height: 15em;
+}
+
+h1,h2 {
+  letter-spacing: 0.0001px;
+  line-height: 0.9em;
+}
+
+p { 
+  margin: 10px 10px;
+  font-size: 1.1rem;
+  letter-spacing: 0.0003px;
+  line-height: 1.3;
+}
+
+.centered { 
+  text-align: center; 
+}
+
+p.to-comments {
+  margin: 0;
+  margin-top: auto;
+  text-align: center;
+}
+
+#fortune-cookie { 
+  font-size: 160%;
+}
+
+hr {
+   margin-bottom: 18px;
+   visibility: hidden;
+}
+
+article a {
+  color: #FF69B4;
+  text-decoration: underline;
+  font-size: 0.9em;
+}
+
+nav .active-page {
+  color: #FF00FF;
+  text-decoration: underline;
+}
+
+a:hover, button:hover { color: #FF00FF; }
+
+a, button {
+  color: #9242C4;
+  text-decoration: none;
+}
+
+button {
+  width: fit-content;
+  padding: 8px 16px;
+  vertical-align: middle;
+  cursor: pointer;
+  border: solid 1px;
+  border-radius: 7px;
+  vertical-align: middle;
+  font-size:1.2em;
+}
+
+
+/* LAYOUT */
+
+div#wrap {
+  margin: 0 auto;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/*div#content {  
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}*/
+
+/*#fb-page {
+  align-self: flex-start; 
+  height: 1800px;
+  min-width: 330px;
+  background-color: #FBFBFB;
+  border: 0.1em solid #E0E0E0;
+  border-radius: 5px;
+  margin-left: 5px;  
+}*/
+
+/*@media (max-device-width : 900px), (orientation: portrait) {
+  p {
+    font-size: 200%;
+  }
+  #fb-page {
+    margin-left: 2px;
+  }
+}*/
+
+
+@media (max-device-width : 720px) {
+ /* Layout */
+/*  div#content {
+    flex-direction: column;
+    align-items: flex-start;
+  }*/
+  
+/*  div#notes {
+    min-width: 95%;
+  }*/
+
+  header p { 
+    font-size: 70%;
+  }
+
+  header h1 {
+    font-size: 1.5em;    
+  }
+
+  /* #fortune {
+    max-width: 90%;
+  } */
+  #fortune article {
+    width: 100%;
+    padding: 0;
+  }
+
+/*  #fb-page {
+      min-width: 310px;
+      height: 600px;
+      align-self: center;
+      margin-bottom: 30px;
+      margin-left: 0px;
+  }*/
+
+/*  iframe {
+    width: 310px;
+    height: 600px;
+    max-height: 600px;
+  }*/
+  /* Colors and Fonts */
+
+/*  header { 
+    font-size: 1.2em;
+  }
+*/
+/*  nav li+li {
+    margin-left: 0px;
+    margin-top: 19px;
+  }*/
+  nav ul {
+    margin-top: 10px;
+  }
+  nav li {
+    display: block;    
+    margin-bottom: 20px; 
+  }
+  nav li+li {
+    margin-left: 0px;
+  }
+
+  article {
+    padding: 5 2;
+    /*grid-column: span 2;*/
+  }
+
+/*  p {
+    font-size: 160%;
+    padding: 0;
+    margin: 0;    
+    margin-top: 10px;
+  }*/
+  /*p + p {
+    margin-top: 20px;
+  }*/
+/*  nav a {
+    font-size: 120%;
+  }*/
+/*  a {
+  color: #F19CE5;
+  }*/
+  blockquote {
+    padding-left: 0.2em;
+    margin-left: 3px;
+  }
+}

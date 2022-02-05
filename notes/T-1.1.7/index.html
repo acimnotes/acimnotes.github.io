@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>
@@ -12,27 +13,20 @@ ACIM notes
 
   <!-- <link rel='stylesheet'href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600'> -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600" rel="stylesheet">  -->
-  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat'>
+  <!-- <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat'> -->
   <!-- <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat&text=ACIM%20notes'> -->
 
-  <link rel="stylesheet" href="/static/css/bas.css">
+  <link rel="stylesheet" href="/static/bas.css">
 
   
   <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous"> -->
   <!--  <script type="text/javascript" src="/static/js/my.js"> -->
   
   <script>
-    function change_outer_links_targets (links) {
-      for (var index in links) {
-        if (links[index].hostname != window.location.hostname) {
-          links[index].target = '_blank'; }
-      }
-    }
-
     function $ (selector) {
       var elements = document.querySelectorAll(selector);
       if (elements.length > 0) {
-        return (elements.length === 1) ? elements[0] : elements;
+        return (elements.length > 1) ? elements : elements[0];
       }    
       return null;
     }
@@ -79,8 +73,9 @@ ACIM notes
           </h2>
         </nav>
 
-        <script>      
-          //nav menu highlight the active page        
+      </header>
+      <script>
+          // highlights the active page in the nav header.
           nav_links = $('nav a');
           for (var i = 0; i < nav_links.length; i++) {
             if ( nav_links[i].getAttribute('href') === document.location.pathname ) {
@@ -88,9 +83,7 @@ ACIM notes
               break;
             }
           }
-        </script>
-        
-      </header>
+      </script>
 
     
     
@@ -150,6 +143,13 @@ ACIM notes
   <!-- start onload -->
   <script> 
     window.onload = function() {
+        
+        function change_outer_links_targets (links) {
+            for (var index in links) {
+            if (links[index].hostname != window.location.hostname) {
+                links[index].target = '_blank'; }
+            }
+        }
 
       change_outer_links_targets(document.links);
 
