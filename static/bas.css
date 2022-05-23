@@ -15,8 +15,8 @@ body {
 }
 
 header { 
-  /* font-family: 'Montserrat', Arial, sans-serif; */
-  font-family: Georgia, system-ui;
+   font-family: 'Montserrat', Georgia, system-ui; 
+  /*font-family: Georgia, system-ui;*/
   margin-top: 27px;
   margin-bottom: 27px;
   font-size: 120%;
