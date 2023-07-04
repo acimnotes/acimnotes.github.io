@@ -112,8 +112,8 @@ p.to-comments {
 }
 
 hr {
-   margin-bottom: 18px;
-   visibility: hidden;
+  margin-bottom: 18px;
+  visibility:visible
 }
 
 article a {
